@@ -1,2 +1,4 @@
 # Hello-World
-Ideas y recursos
+Ideas, recursos
+
+Código base, conjuntos de datos, etc
