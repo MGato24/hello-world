@@ -183,25 +183,6 @@ ggplot(datos) + aes(dpto, fill = dpto) +
 dev.off() #Siempre termina con esto
 
 
-
-# Insertar una imagen en un gráfico:
-
-library(png)
-library(ggpubr) #background_image
-
-img = readPNG("logo.png")
-
-ggplot(datos) + aes(dpto, fill = dpto) + 
-  background_image(img) + 
-  geom_bar(show.legend = F) +
-  theme_bw() + 
-  labs(title = "Gráfico de Barras Vertical", 
-       x= "Departamentos", 
-       y= "Frecuencia") + 
-  scale_fill_brewer(palette = "RdYlGn")
-
-
-
 # Gráfico interactivo con el paquete plotly:
 
 library(plotly)
