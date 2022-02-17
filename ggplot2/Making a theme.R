@@ -1,7 +1,6 @@
 
 #EDITANDO TEMA PROPIO
 
-
 # Relación de temas
 browseURL("https://ggplot2.tidyverse.org/reference/ggtheme.html")
 
