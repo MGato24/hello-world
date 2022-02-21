@@ -1,0 +1,151 @@
+---
+title: "RMarkdown"
+subtitle: "Haciendo un documento en RMarkdown"
+author: "Maicol A.B."
+date: "Febrero 21, 2022"
+output: 
+  html_document:
+    toc: true
+    toc_depth: 6
+    toc_float: 
+      collapsed: true
+    number_sections: true
+    theme: spacelab
+lang: es-ES
+bibliography: Biblio.bib
+csl: apa.csl
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE, warning = FALSE, message = FALSE)
+
+library(reticulate)
+```
+
+
+# Encabezado 1
+
+## Encabezado 2
+
+### Encabezado 3
+Solo es posible colocar hasta 6 encabezados
+
+---
+
+## Formato del texto
+
+
+**Esto es bold**
+
+*Esto es cursiva*
+
+~~Esto es tachado~~
+
+***Esto es cursiva bold***
+
+~~*Esto es cursiva tachado*~~
+
+<u>Esto es un texto subrayado</u>
+
+Subíndice F~2~
+
+Superíndice F^2^
+
+
+**LISTAS**
+
+1.  Primer componente de la lista
+2.  Primer componente de la lista
+3.  Primer componente de la lista
+
+Lista no ordenada
+
+Se puede usar los símbolos \*, +, -.
+
+-   Un elemento de la lista
+-   El siguiente elemento de la lista
+-   Otro elemento de la lista
+
+> Los símbolos se pueden utilizar combinados o de un único estilo, el efecto será el mismo.
+
+1.  Esto es una lista ordenada
+
+2.  2do elemento de la lista ordenada
+
+    1.  Lista ordenada anidada dentro de otra
+
+        -   Lista no ordenada anidada a 3er nivel
+        -   2do elemento de esta lista
+
+    2.  2do elemento de la lista ordenada anidada
+
+
+Imagen:
+
+
+Enlace:
+[nombre](enlace.algo)
+
+
+
+## Ecuaciones
+
+<https://www.codecogs.com/latex/eqneditor.php>
+
+En la misma linea $y = x+1 $
+
+En una linea abajo $$y = x+1$$
+
+
+## Tablas
+
++-----------+------------+
+| Género    | Frecuencia |
++:=========:+:==========:+
+| Masculino | 40         |
++-----------+------------+
+| Femenino  | 60         |
++-----------+------------+
+| Total     | 100        |
++-----------+------------+
+
+
+## Citas
+
+> Esto es una cita uwu [^1]
+
+[^1]: Esto también es una cita al parecer. holis
+
+
+## Insertando código en Python
+Requiere el paquete "Reticulate"
+
+```{python}
+x  = 3
+print(x)
+```
+
+# Temas disponibles 
+
+[Temas](https://bootswatch.com/)
+
+temas por defecto: "default", "bootstrap", "cerulean", "cosmo", "darkly", "flatly", "journal", "lumen", "paper", "readable", "sandstone", "simplex", "spacelab", "united", "yeti"
+
+
+# Insertando Código de R dentro de un texto
+
+Es posible poner una estadística o un resultado dentro de un texto. Por ejemplo, la edad promedio es de `r mean(c(1,5,3))` años.
+
+
+## Rrecursos:
+
+El libro por excelente es el libro de Huff [@huff2011como]. Otros recursos lo pueden encontrar en [@esquivel2016ensenanza]
+
+## Bibliografía
+
+
+
+
+
+
+

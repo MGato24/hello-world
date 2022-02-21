@@ -1,0 +1,35 @@
+# HACIENDO UN DOCUMENTO EN RMARKDOWN --------------------------------------
+
+# YAML:
+
+Controla las configuraciones de todo el documento. La gerarquía es importante
+
+
+  toc: true/false               -> Insertar índice al documento
+  toc_depth: 1 al 6             -> Profundiad de encabezados en el índice
+  toc_float: true/false         -> Índice a un costado del documento
+  number_sections: true/false   -> Numerar los encabezados
+  bibliography: Biblio.bib      -> archivo .bib donde va tu bbibliografía
+
+
+# Opciones generales para todos los chunk
+
+```{r setup, include=FALSE}
+
+knitr::opts_chunk$set(echo = FALSE, warning = FALSE, message = FALSE)
+
+```
+  include = f         -> no incluye resultados ni código, aunque si eval=TRUE si los evalúa
+  echo = F            -> solo muestra los resultados, no el código
+  results = “hide”    -> No muestra resultado (tablas, estadísticas)
+  
+                          -“markup” (valor por defecto) muestra los resultados línea a línea,                                              encabezados con dos marcas de comentario ##
+                          
+                          - “hide”: No se muestra el resultado en el documento final
+                          
+                          - “hold”: Muestra todos los resultados de golpe al final del bloque de código
+  
+  message = F         -> No muestra los resultados de salida
+  warning = F         -> Dirige lo warnings a consola y no al documento
+  eval = F            -> No evaluará las expresiones
+
